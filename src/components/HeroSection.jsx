@@ -4,7 +4,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col w-[80%] ">
+    <div className="flex flex-col w-[80%] md:w-[100%] ">
       <div className=" p-4 flex flex-col items-center justify-start gap-4 md:flex-row md:justify-between ">
 
         <span className="text-xl flex flex-col gap-2 text-center text-[#889898] md:text-start  ">
@@ -26,8 +26,10 @@ const HeroSection = () => {
       </div>
 
       <div className="p-4 flex flex-col items-center justify-start gap-4 md:flex-row text-white">
-        <span className="flex flex-row justify-between items-center  " >
-          <a href="#">Hot Dishes</a>
+        <span className="flex items-center justify-between  " >
+          <a 
+          className="text-[#EA7C69] border-b-3 border-b-[#EA7C69] half-border pb-3 "
+          href="#">Hot Dishes</a>
           <FontAwesomeIcon icon={faBars} className="text-xl  " />
           <span className="hidden  ">
           <a href="#">Cold Dishes</a>

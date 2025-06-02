@@ -1,4 +1,5 @@
 import HeroSection from "./components/HeroSection"
+import Menu from "./components/Menu"
 import Navbar from "./components/Navbar"
 
 function App() {

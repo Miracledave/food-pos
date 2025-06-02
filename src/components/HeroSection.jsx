@@ -1,11 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import Menu from "./Menu";
 
 const HeroSection = () => {
+
   return (
-    <div className="flex flex-col w-[80%] md:w-[100%] ">
-      <div className=" p-4 flex flex-col items-center justify-start gap-4 md:flex-row md:justify-between ">
+    <div className="flex flex-col w-[80%] md:w-[100%] justify-start p-4 text-white">
+      <div className="container mx-auto m-4 flex flex-col items-center justify-start gap-4 md:flex-row md:justify-between ">
 
         <span className="text-xl flex flex-col gap-2 text-center text-[#889898] md:text-start  ">
           <h1 className="text-4xl font-bold text-center text-white ">
@@ -25,21 +28,46 @@ const HeroSection = () => {
 
       </div>
 
-      <div className="p-4 flex flex-col items-center justify-start gap-4 md:flex-row text-white">
-        <span className="flex items-center justify-between  " >
+      <div className="container mx-auto flex flex-col items-center justify-start gap-4 md:flex-row text-white border-b border-[#393C49] m-4 ">
+        <span className="flex justify-between gap-16 font-semibold w-[100%] md:w-[90%] md:gap-0 " >
           <a 
           className="text-[#EA7C69] border-b-3 border-b-[#EA7C69] half-border pb-3 "
           href="#">Hot Dishes</a>
-          <FontAwesomeIcon icon={faBars} className="text-xl  " />
-          <span className="hidden  ">
-          <a href="#">Cold Dishes</a>
-          <a href="#">Soup</a>
-          <a href="#">Grill</a>
-          <a href="#">Appetizer</a>
-          <a href="#">Hot Dishes</a>
+          <span className="text-xl md:hidden  ">
+          <FontAwesomeIcon icon={faBars}  />
           </span>
+          
+          <a className="hidden border-b-[#EA7C69] pb-3 md:block "
+           href="#">Cold Dishes</a>
+          <a className="hidden border-b-[#EA7C69] pb-3 md:block "
+           href="#">Soup</a>
+          <a className="hidden border-b-[#EA7C69] pb-3 md:block "
+           href="#">Grill</a>
+          <a className="hidden border-b-[#EA7C69] pb-3 md:block "
+           href="#">Appetizer</a>
+          <a className="hidden border-b-[#EA7C69] pb-3 md:block "
+           href="#">Hot Dishes</a>
         </span>
       </div>
+
+      <div>
+
+        <div className=" container mx-auto flex justify-between items-center m-4">
+          <h2 className="text-xl md:text-3xl lg:text-4xl "
+          >Choose Dishes</h2>
+          <div className="p-2 flex items-center border-[#393C49] bg-[#1F1D2B] xl:text-xl ">
+          <FontAwesomeIcon icon={faArrowDown} />
+          <select name="Dine in" className="appearance-none text-end ">
+            <option >Dine in</option>
+            <option >Take away</option>
+          </select>
+          </div>
+        </div>
+
+        <Menu />
+
+      </div>
+      
 
     </div>
   );

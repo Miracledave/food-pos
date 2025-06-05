@@ -55,7 +55,7 @@ const HeroSection = () => {
         <div className=" container mx-auto flex justify-between items-center m-4">
           <h2 className="text-xl md:text-3xl lg:text-4xl "
           >Choose Dishes</h2>
-          <div className="p-2 flex items-center border-[#393C49] bg-[#1F1D2B] xl:text-xl ">
+          <div className="p-2 flex items-centeer border-[#393C49] bg-[#1F1D2B] xl:text-xl ">
           <FontAwesomeIcon icon={faArrowDown} />
           <select name="Dine in" className="appearance-none text-end ">
             <option >Dine in</option>
